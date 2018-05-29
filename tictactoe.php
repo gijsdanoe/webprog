@@ -18,24 +18,26 @@
     <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
 </head>
 <body>
-<h1></h1>
+<h1>Tic Tac Toe</h1>
 <div>
 <table class="board">
     <tr>
-        <td class="content"></td>
-        <td class="content"></td>
-        <td class="content"></td>
+        <td onclick="play(this);" class="content"></td>
+        <td onclick="play(this);" class="content"></td>
+        <td onclick="play(this);" class="content"></td>
     </tr>
     <tr>
-        <td class="content"></td>
-        <td class="content"></td>
-        <td class="content"></td>
+        <td onclick="play(this);" class="content"></td>
+        <td onclick="play(this);" class="content"></td>
+        <td onclick="play(this);" class="content"></td>
     </tr>
     <tr>
-        <td class="content"></td>
-        <td class="content"></td>
-        <td class="content"></td>
+        <td onclick="play(this);" class="content"></td>
+        <td onclick="play(this);" class="content"></td>
+        <td onclick="play(this);" class="content"></td>
     </tr>
 </table>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="tictactoe.js"></script>
 </body>
