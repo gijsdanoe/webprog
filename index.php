@@ -15,12 +15,13 @@
         gtag('config', 'UA-115655085-1');
     </script>
     <link rel="stylesheet" type="text/css" href="tictactoe.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-grid.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
 </head>
 <body>
-<h1>Tic Tac Toe</h1>
 <div>
 <table class="board">
+    <h2 id="name_display">Tic-Tac-Toe</h2>
     <tr>
         <td onclick="play(this);" class="content"></td>
         <td onclick="play(this);" class="content"></td>
