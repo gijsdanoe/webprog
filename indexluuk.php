@@ -18,24 +18,27 @@
     <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
 </head>
 <body>
-    <div class="board">
-        <h2 id="name_display">Tic-Tac-Toe</h2>
-        <div id="row1">
-            <div onclick="play(this,1);" class="content"></div>
-            <div onclick="play(this,2);" class="content"></div>
-            <div onclick="play(this,4);" class="content"></div>
-        </div>
-        <div id="row2">
-            <div onclick="play(this,8);" class="content"></div>
-            <div onclick="play(this,16);" class="content"></div>
-            <div onclick="play(this,32);" class="content"></div>
-        </div>
-        <div id="row3">
-            <div onclick="play(this,64);" class="content"></div>
-            <div onclick="play(this,128);" class="content"></div>
-            <div onclick="play(this,256);" class="content"></div>
-        </div>
+<header>
+    <h1>Boter-kaas-en-eieren</h1>
+    <h2 id="name_display">&nbsp;</h2>
+</header>
+<div class="board">
+    <div id="row1">
+        <div onclick="play(this,1);" class="content"></div>
+        <div onclick="play(this,2);" class="content"></div>
+        <div onclick="play(this,4);" class="content"></div>
     </div>
+    <div id="row2">
+        <div onclick="play(this,8);" class="content"></div>
+        <div onclick="play(this,16);" class="content"></div>
+        <div onclick="play(this,32);" class="content"></div>
+    </div>
+    <div id="row3">
+        <div onclick="play(this,64);" class="content"></div>
+        <div onclick="play(this,128);" class="content"></div>
+        <div onclick="play(this,256);" class="content"></div>
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="tictactoe.js"></script>
 </body>
