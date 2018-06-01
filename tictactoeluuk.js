@@ -3,7 +3,7 @@ let markers = ["X","O"];
 let scores = [0,0];
 let turn = 0;
 let valuesWin = [7,56,73,84,146,273,292,448];
-var endGame = false
+var endGame = false;
 players[0] = prompt("Vul de naam van speler 1 (X) in");
 players[1] = prompt("Vul de naam van speler 2 (O) in");
 
@@ -38,3 +38,7 @@ function toggle() {
 
     document.getElementById("name_display").innerText = players[turn] + " is nu aan de beurt.";
 }
+
+$("#reset").click(function () {
+   $(".content").childNodes.innerText = '';
+});

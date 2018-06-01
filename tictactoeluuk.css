@@ -12,12 +12,12 @@ div.board {
     margin: 0 auto;
 }
 
-body{
-    background-color: white;
-    width: 1000px;
-    margin: 10px auto;
-    text-align: center;
-    padding: 10px
+body {
+    background-color: #F0F5F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
 }
 
 div#row1 div, div#row2 div, div#row3 div {
@@ -50,9 +50,22 @@ div#row3 div{
     border-bottom: none;
 }
 
-h1 {
+#name_display {
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.board {
+    color: darkslategrey;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
     text-align: center;
 }
+
 span {
     color: blue;
 }
