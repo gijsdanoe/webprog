@@ -1,11 +1,11 @@
 let players = [];
-let markers = ["<span class='X'>X</span>","<span class='O'>O</span>"];
+let markers = ["X","O"];
 let scores = [0,0];
 let turn = 0;
 let valuesWin = [7,56,73,84,146,273,292,448];
 var endGame = false;
-players[0] = prompt("Vul de naam van speler 1 (X) in");
-players[1] = prompt("Vul de naam van speler 2 (O) in");
+players[0] = "Player 1";
+players[1] = "Player 2";
 
 function checkWin() {
     for (var i = 0; i < valuesWin.length; i++) {
@@ -14,7 +14,7 @@ function checkWin() {
             endGame = true;
         }
         if (((scores[0] + scores[1]) == 511) && !endGame)  {
-            document.getElementById("name_display").innerText = "Gelijkspel!";
+            document.getElementById("name_display").innerText = "Geen winnaar!";
             endGame = true;
         }
     }
@@ -24,7 +24,7 @@ function play(clickedTd, Tdvalue) {
     if (!endGame) {
         scores[turn] += Tdvalue;
         clickedTd.onclick = '';
-        clickedTd.innerHTML = markers[turn];
+        clickedTd.innerHTML = "<span>" + markers[turn] + "</span>";
         checkWin();
         if (!endGame) {
             toggle();
@@ -38,21 +38,7 @@ function toggle() {
 
     document.getElementById("name_display").innerText = players[turn] + " is nu aan de beurt.";
 }
-function XY() {
-    $.ajax( "tictactoe.php?ajax=true" )
-        .done( function (data) {
-            console.log(data);
-            $( '.content' ).html('');
-            $( '.content' ).append('$X' );
-            })
-        .fail( function () {
-        })
-        .always( function () {
-        });
-}
 
-$(".content").on("click", function () {
-    $.ajax({method: "POST", url: "online.php", data: {1: $('#1').val(), 2:
-                $('#2').val()}})
-        .done(function (data) {
-        })});
+window.onload = $("#reset").click(function () {
+    $(".content").childNodes.innerHTML = '';
+});
