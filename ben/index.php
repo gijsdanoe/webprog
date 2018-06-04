@@ -1,3 +1,11 @@
+<?PHP
+if (isset($_GET['ajax'])) {
+    $data = file_get_contents("values.json");
+    header('Content-Type: application/json');
+    echo $data;
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +22,7 @@
 
         gtag('config', 'UA-115655085-1');
     </script>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="tictactoeluuk.css" />
     <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
 </head>
 <body>
@@ -38,7 +46,11 @@
         <div onclick="play(this,128);" class="content" id="8"></div>
         <div onclick="play(this,256);" class="content" id="9"></div>
     </div>
+    <div>
+        <button type="submit" id="submit">Submit</button>
+    </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="main.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="tictactoe.js"></script>
+
 </body>
