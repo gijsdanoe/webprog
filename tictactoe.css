@@ -1,16 +1,86 @@
-td {
+* {margin:0; padding:0;}
+html {background-color: black}
+
+span {
+    font-size: 75px;
+    margin-top: 40px;
+}
+
+div.board {
+    width: 456px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+body {
+    background-color: darkorange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+div#row1 div, div#row2 div, div#row3 div {
+    width: 150px;
+    height: 150px;
     border: 1px solid black;
-    height: 50px;
-    width: 50px;
+    float: left;
 }
-div {
-    display:table;
-    margin: auto;
-    margin-top: 200px;
+
+div#row1, div#row2, div#row3 {
+    float: none;
+    width: 608px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
+
+div#row1 div:first-child, div#row2 div:first-child, div#row3 div:first-child {
+    border-left: none;
+}
+
+div#row1 div:last-child, div#row2 div:last-child, div#row3 div:last-child {
+    border-right: none;
+}
+
+div#row1 div{
+    border-top: none;
+}
+
+div#row3 div{
+    border-bottom: none;
+}
+
+#name_display {
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.board {
+    color: darkslategrey;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+    text-align: center;
+}
+
+span {
+    color: blue;
+}
+
 h1 {
     text-align: center;
 }
-span {
-    color: blue;
+
+.button {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
