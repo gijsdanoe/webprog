@@ -11,7 +11,7 @@ if (isset($_POST['box']) && isset($_POST['value']) ) {
     $variables = json_decode($data); /* Maakt van de ingelezen JSON weer een array */
     $box = $_POST['box'];
     $value = $_POST['value'];
-    $variables[$box] = array("box" => $box, "value" => $value);
+    $variables[] = array("box" => $box, "value" => $value);
     $output = json_encode($variables);
     file_put_contents("values.json", $output); /* Schrijf de JSON weer weg naar books.json */
 }

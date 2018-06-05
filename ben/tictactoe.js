@@ -13,36 +13,11 @@ function fetchBoxes() {
     $.ajax("index.php?ajax=true")
         .done(function (data) {
             console.log(data);
+            $(".content").html('');
             for (let turns in data) {
-                if (${turns.box} == 1) {
-                    $('#1').append(`<span>${turns.value}</span>`);
+                $(this).append(`<li>${turns.box} - ${turns.value}</li>`);
                 }
-                else if (turns["box"] == 2) {
-                    document.getElementById("2").innerHTML = turns["value"]
-                }
-                else if (turns["box"] == 3) {
-                    document.getElementById("3").innerHTML = turns["value"]
-                }
-                else if (turns["box"] == 4) {
-                    document.getElementById("4").innerHTML = turns["value"]
-                }
-                else if (turns["box"] == 5) {
-                    document.getElementById("5").innerHTML = turns["value"]
-                }
-                else if (turns["box"] == 6) {
-                    document.getElementById("6").innerHTML = turns["value"]
-                }
-                else if (turns["box"] == 7) {
-                    document.getElementById("7").innerHTML = turns["value"]
-                }
-                else if (turns["box"] == 8) {
-                    document.getElementById("8").innerHTML = turns["value"]
-                }
-                else if (turns["box"] == 9) {
-                    document.getElementById("9").innerHTML = turns["value"]
-                }
-            }
-        });
+            })
 }
 
 function checkWin() {
@@ -66,7 +41,6 @@ function play(clickedTd, Tdvalue) {
         checkWin();
         if (!endGame) {
             toggle();
-            fetchBoxes();
         }
     }
 }
@@ -87,7 +61,7 @@ $('.content').click(function () {
    let player_turn = mark[turn];
    $.ajax({method: "POST", url: "add.php", data: {box: selected_id, value: player_turn}})
        .done(function (data) {
-        fetchBoxes();
+           fetchBoxes();
        });
 });
 
