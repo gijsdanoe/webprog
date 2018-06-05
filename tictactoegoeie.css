@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: 'arial';
+    font-weight: 100;
+}
+
+main {
+    background-color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+}
+
+symb {
+    font-size: 500%;
+    line-height: 1.4;
+}
+
+.game {
+    width: 375px;
+    height: 375px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.clearbutton {
+    text-align: center;
+    width: auto;
+    padding: 19px;
+}
+
+.c1 {
+    width: 33%;
+    height: 33%;
+    outline: 1px solid;
+    float: left;
+}
+.c2 {
+    width: 33%;
+    height: 33%;
+    outline: 1px solid;
+    float: left;
+}
+
+.c3 {
+    width: 33%;
+    height: 33%;
+    outline: 1px solid;
+    float: left;
+}
+
+.c4 {
+    width: 33%;
+    height: 33%;
+    outline: 1px solid;
+    float: left;
+}
+
+.c5 {
+    width: 33%;
+    height: 33%;
+    outline: 1px solid;
+    float: left;
+}
+
+.c6 {
+    width: 33%;
+    height: 33%;
+    outline: 1px solid;
+    float: left;
+}
+
+.c7 {
+    width: 33%;
+    height: 33%;
+    outline: 1px solid;
+    float: left;
+}
+
+.c8 {
+    width: 33%;
+    height: 33%;
+    outline: 1px solid;
+    float: left;
+}
+
+.c9 {
+    width: 33%;
+    height: 33%;
+    outline: 1px solid;
+    float: left;
+}
+
+.turn {
+    display: none;
+}
